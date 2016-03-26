@@ -1,0 +1,18 @@
+{% extends "common/base.twig" %}
+
+{% block css %}
+    <link rel="stylesheet" href="./css/index.min.css">
+{% endblock %}
+
+{% block content %}
+    {% include "common/nav.twig" %}
+    <div class="content">{{ content }}</div>
+<div class="img">
+    <img src="./images/loading.gif" />
+</div>
+
+{% endblock %}
+
+{% block script %}
+    <script src="./js/index.js"></script>
+{% endblock %}

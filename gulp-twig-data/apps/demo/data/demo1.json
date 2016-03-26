@@ -1,0 +1,17 @@
+{
+  "navigation":[
+    {
+      "href":"http://www.baidu.com",
+      "caption":"百度"
+    },
+    {
+      "href":"http://www.sing.com.cn",
+      "caption":"新浪"
+    },
+    {
+      "href":"http://www.qq.com",
+      "caption":"腾讯"
+    }
+  ],
+  "a_variable":"吴健"
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>测试demo</title>
+    <link rel="stylesheet" href="{{ asset('newyearbundle/wap') }}/css/reset-902deb1249.min.css" >
+    {% block css %}{% endblock %}
+</head>
+<body>
+<div class="wrapper">
+{% block content %}{% endblock %}
+</div>
+
+<script src="{{ asset('newyearbundle/wap') }}/js/zepto-1abd55c514.min.js"></script>
+{% block script %}{% endblock %}
+</body>
+</html>

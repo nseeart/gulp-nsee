@@ -1,0 +1,5 @@
+{
+    "appPath":"/apps",
+    "viewsPath": "./views",
+    "assetsPath": "./assets"
+}

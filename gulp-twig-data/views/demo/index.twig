@@ -1,0 +1,18 @@
+{% extends "common/base.twig" %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('newyearbundle/wap') }}/css/index-a3abe9a7b2.min.css">
+{% endblock %}
+
+{% block content %}
+    {% include "common/nav.twig" %}
+    <div class="content">{{ content }}</div>
+<div class="img">
+    <img src="{{ asset('newyearbundle/wap') }}/images/loading-50c5e3e79b.gif" />
+</div>
+
+{% endblock %}
+
+{% block script %}
+    <script src="{{ asset('newyearbundle/wap') }}/js/index-6c57c7ed83.js"></script>
+{% endblock %}

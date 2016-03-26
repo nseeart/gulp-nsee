@@ -1,0 +1,35 @@
+/**
+ * Created by Administrator on 2016/2/26.
+ */
+var path = require('path');
+var gulp = require('gulp'),
+    data = require('gulp-data'),
+    twig = require('gulp-twig'),
+    rename = require('gulp-rename'),
+    gulpif = require('gulp-if');
+
+var getJsonData = function(file) {
+        var fileName = path.basename(file.path);
+        var fileFirsName = fileName.split('.')[0];
+        return require('./data/' + fileFirsName + '.json');
+    },
+    fnTwig = function(){
+        console.log('demo1...');
+        return gulp.src('./build/twig/*.twig')
+            .pipe(data(getJsonData))
+            .pipe(twig())
+            .pipe(gulp.dest('dist'));
+    },
+    fnTwigWatch = function(){
+        gulp.watch('./build/twig/**/*.twig',['demoTwig']);
+        gulp.watch('./data/*.json',['demoTwig'])
+    }
+
+
+
+gulp.task('demoTwig',fnTwig);
+gulp.task('demoTwig:watch',fnTwigWatch)
+
+gulp.task('default',['demoTwig','demoTwig:watch'],function(){
+   console.log('run gulp ...')
+})
